@@ -1,37 +1,25 @@
 // ✅ All imports go first
-import { StrictMode, useEffect, useState } from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
+// Pages
 import LandingPage from './Components/LandingPage/LandingPage.jsx';
-import Settings from './Components/Settings/SettingsPage.jsx'; // Correct
+import SettingsPage from './Components/Settings/SettingsPage.jsx';
+
+// Context
+import { SettingsProvider } from './Components/Settings/SettingsContext.jsx'; // 🆕 context here!
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    if (savedMode !== null) {
-      setDarkMode(savedMode === "true");
-    } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setDarkMode(prefersDark);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("darkMode", darkMode);
-  }, [darkMode]);
-
   return (
-    <div className={`app-container ${darkMode ? "dark-mode" : ""}`}>
+    <div className="app-container">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage darkMode={darkMode} />} />
-          <Route path="/Settings" element={<Settings darkMode={darkMode} setDarkMode={setDarkMode} />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -40,6 +28,8 @@ function App() {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
+    <SettingsProvider> {/* 👈 wrapped here */}
+      <App />
+    </SettingsProvider>
+  </StrictMode>
 );
