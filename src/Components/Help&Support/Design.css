@@ -1,0 +1,311 @@
+.mainContainer {
+    background-color: #fff;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0 3px 6px #120f281f;
+  }
+  
+  @media (width <= 991px) {
+    .mainContainer {
+      max-width: 991px;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .mainContainer {
+      max-width: 640px;
+    }
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #fff;
+    box-shadow:
+      0 0 2px #171a1f1f,
+      0 0 1px #171a1f12;
+  }
+  
+  .headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .title {
+    color: #000;
+    font-family: Archivo, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .navLink {
+    color: #565e6c;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+  }
+  
+  .navLink:hover {
+    color: #636ae8;
+    background: #636ae81a;
+  }
+  
+  .helpButton {
+    color: #fff;
+    cursor: pointer;
+    background-color: #636ae8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    transition: all 0.2s;
+    border: none;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+  }
+  
+  .helpButton:hover {
+    background: #4f56ba;
+  }
+  
+  /* Content Container */
+  .contentContainer {
+    padding: 52px 72px;
+  }
+  
+  /* Tutorial Section */
+  .tutorialSection {
+    margin-bottom: 50px;
+  }
+  
+  .sectionTitle {
+    color: #000;
+    margin-bottom: 12px;
+    font-family: Archivo, sans-serif;
+    font-size: 24px;
+  }
+  
+  .tutorialPagination {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .paginationButton {
+    color: #000;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40px;
+    height: 36px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    border: none;
+  }
+  
+  .tutorialContent {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  /* FAQ Section */
+  .faqSection {
+    margin-bottom: 50px;
+  }
+  
+  .sectionDescription {
+    color: #565e6c;
+    margin-bottom: 12px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+  }
+  
+  .faqGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .faqCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 306px;
+  }
+  
+  .faqImage {
+    border-radius: 10px;
+    width: 306px;
+    height: 180px;
+  }
+  
+  .faqCardTitle {
+    color: #171a1f;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .faqCardDescription {
+    color: #9095a0;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+  }
+  
+  .faqCardButton {
+    color: #636ae8;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #636ae8;
+    border-radius: 6px;
+    width: 100%;
+    height: 36px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+  }
+  
+  .faqCardButton:hover {
+    color: #636ae8;
+    background: #636ae81a;
+  }
+  
+  /* Contact Form */
+  .contactSection {
+    margin-bottom: 50px;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  
+  .formField {
+    width: 100%;
+  }
+  
+  .formInput {
+    color: #bcc1ca;
+    border: 1px solid #bcc1ca;
+    border-radius: 6px;
+    width: 100%;
+    padding: 9px 16px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+  }
+  
+  .formTextarea {
+    color: #bcc1ca;
+    resize: none;
+    border: 1px solid #bcc1ca;
+    border-radius: 6px;
+    width: 100%;
+    height: 51px;
+    padding: 9px 16px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+  }
+  
+  .submitButton {
+    color: #fff;
+    cursor: pointer;
+    background-color: #636ae8;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 44px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+  }
+  
+  .submitButton:hover {
+    background: #4f56ba;
+  }
+  
+  /* Media Queries */
+  @media (width <= 991px) {
+    .contentContainer {
+      padding: 40px;
+    }
+  
+    .headerContent {
+      padding: 16px 20px;
+    }
+  
+    .navigation {
+      gap: 24px;
+    }
+  
+    .faqGrid {
+      gap: 16px;
+    }
+  
+    .faqCard {
+      width: calc(50% - 16px);
+    }
+  }
+  
+  @media (width <= 640px) {
+    .contentContainer {
+      padding: 20px;
+    }
+  
+    .headerContent {
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 16px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .navigation {
+      order: 3;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .helpButton {
+      margin-left: auto;
+    }
+  
+    .faqGrid {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .faqCard {
+      width: 100%;
+    }
+  
+    .contactForm {
+      gap: 10px;
+    }
+  }
+  
