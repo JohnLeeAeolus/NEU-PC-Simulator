@@ -1,21 +1,33 @@
-*{
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  
 }
+
 html, body, #root {
   height: 100%;
 }
 
-.container{
+.container {
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto;
 }
 
+/* Light Mode by Default */
 body {
   margin: 0;
-  background-color: #ced8ff;
+  background-color: #ced8ff; /* light blue background */
+}
+
+/* Dark Mode */
+.dark-mode body {
+  background-color: #121212; /* deep dark background */
+}
+
+/* Optional: Smooth transitions for background changes */
+body {
+  transition: background-color 0.3s ease;
 }

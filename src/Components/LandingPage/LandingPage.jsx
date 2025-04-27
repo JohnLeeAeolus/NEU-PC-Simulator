@@ -5,9 +5,9 @@ import HeroSection from "./HeroSection";
 import FeaturesSection from "./FeaturesSection";
 import DeveloperQuotes from "./DeveloperQuotes";
 
-const LandingPage = () => {
+const LandingPage = ({ darkMode }) => {
   return (
-    <>
+    <div className={`landing-page ${darkMode ? "dark-mode" : ""}`}>
       <link
         href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet"
@@ -18,7 +18,7 @@ const LandingPage = () => {
         <FeaturesSection />
         <DeveloperQuotes />
       </main>
-    </>
+    </div>
   );
 };
 

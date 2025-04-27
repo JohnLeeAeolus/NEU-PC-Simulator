@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Link } from "react-router-dom"; // Import the Link component
 import styles from "./components.module.css";
 import { LogoIcon, PlayIcon, HelpIcon } from "./Icons";
 
@@ -15,9 +16,10 @@ const NavigationHeader = () => {
         <a href="#" className={styles.navLink}>
           Home
         </a>
-        <a href="#" className={styles.navLink}>
+        {/* Correctly set up the Link component for Settings */}
+        <Link to="/Settings" className={styles.navLink}>
           Settings
-        </a>
+        </Link>
       </nav>
 
       <div className={styles.actionButtons}>
