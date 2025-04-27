@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 import LandingPage from './Components/LandingPage/LandingPage.jsx';
+import Settings from './Components/Settings/GameSettings.jsx';
 
 // ✅ Then your render logic
 createRoot(document.getElementById('root')).render(
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/Settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
