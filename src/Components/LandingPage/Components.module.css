@@ -1,0 +1,238 @@
+.header {
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  display: flex;
+  box-shadow:
+    0 0 2px #171a1f1f,
+    0 0 1px #171a1f12;
+}
+
+@media (width <= 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.logoContainer {
+  align-items: center;
+  display: flex;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.brandName {
+  color: #000;
+  font-family: Archivo, sans-serif;
+  font-size: 28px;
+  margin: 0;
+}
+
+.mainNav {
+  gap: 20px;
+  display: flex;
+}
+
+@media (width <= 640px) {
+  .mainNav {
+    display: none;
+  }
+}
+
+.navLink {
+  color: #565e6c;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.actionButtons {
+  gap: 10px;
+  display: flex;
+}
+
+@media (width <= 640px) {
+  .actionButtons {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.playButton {
+  cursor: pointer;
+  color: #636ae8;
+  background-color: #fff;
+  border: 1px solid #636ae8;
+  border-radius: 10px;
+  align-items: center;
+  padding: 7px 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.helpButton {
+  cursor: pointer;
+  color: #fff;
+  background-color: #636ae8;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  padding: 7px 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.heroSection {
+  width: 100%;
+  height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBackground {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.heroOverlay {
+  background-color: #171a1f66;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heroContent {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heroTitle {
+  margin-bottom: 20px;
+  font-family: Archivo, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+@media (width <= 640px) {
+  .heroTitle {
+    font-size: 48px;
+  }
+}
+
+.heroDescription {
+  margin-bottom: 40px;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+}
+
+@media (width <= 640px) {
+  .heroDescription {
+    font-size: 18px;
+  }
+}
+
+.exploreButton {
+  cursor: pointer;
+  background-color: #636ae8;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.featuresSection {
+  text-align: center;
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.sectionTitle {
+  color: #171a1f;
+  margin-bottom: 40px;
+  font-family: Archivo, sans-serif;
+  font-size: 32px;
+}
+
+.featuresGrid {
+  justify-content: center;
+  gap: 24px;
+  display: flex;
+}
+
+@media (width <= 991px) {
+  .featuresGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.featureCard {
+  text-align: center;
+  width: 376px;
+}
+
+.featureIcon {
+  margin-bottom: 16px;
+}
+
+.featureDescription {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.quotesSection {
+  text-align: center;
+  background-color: #fafafb;
+  padding: 60px 0;
+}
+
+.quotesGrid {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  display: flex;
+}
+
+@media (width <= 991px) {
+  .quotesGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.quoteCard {
+  text-align: center;
+  width: 236px;
+}
+
+.developerImage {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.quoteText {
+  color: #171a1f;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+}
