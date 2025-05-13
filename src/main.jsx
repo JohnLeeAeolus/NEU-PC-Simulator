@@ -7,19 +7,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 // Pages
-import LandingPage from './Components/LandingPage/LandingPage.jsx';
-import SettingsPage from './Components/Settings/SettingsPage.jsx';
-
-// Context
-import { SettingsProvider } from './Components/Settings/SettingsContext.jsx'; // 🆕 context here!
+import LandingPage from './Components/pages/LandingPage.jsx';
+import SettingsPage from './Components/pages/SettingsPage.jsx';
+import HelpPage from './Components/pages/HelpPage.jsx';
+import DashboardPage from './Components/pages/DashboardPage.jsx';
+import Header from './Components/shared/Header.jsx';
 
 function App() {
   return (
     <div className="app-container">
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/help" element={<HelpPage />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -28,8 +31,6 @@ function App() {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SettingsProvider> {/* 👈 wrapped here */}
-      <App />
-    </SettingsProvider>
+    <App />
   </StrictMode>
 );

@@ -1,0 +1,169 @@
+.landing-root {
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px #eee;
+}
+
+.logo {
+    width: 28px;
+    margin-right: 8px;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.08rem;
+    padding: 0.2rem 0.5rem;
+    transition: color 0.2s;
+}
+
+.navbar-center .nav-link.active {
+    color: #1976d2;
+    border-bottom: 2px solid #1976d2;
+    font-weight: 500;
+}
+
+.btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #1976d2;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #eee;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+    height: 340px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-explore {
+    background: #1976d2;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.features {
+    padding: 2.5rem 1rem 1.5rem 1rem;
+    background: #fafbfc;
+    text-align: center;
+}
+
+.features-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #eee;
+    padding: 1.2rem;
+    width: 300px;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.developers {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.devs-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.dev-item {
+    width: 180px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #eee;
+    padding: 1rem;
+}
+
+.dev-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 0.7rem;
+}
+
+.dev-quote {
+    font-size: 0.98rem;
+    color: #444;
+}
