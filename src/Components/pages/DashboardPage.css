@@ -1,0 +1,133 @@
+.dashboard-root {
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+    background: #fafbfc;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.dashboard-tabs-wrap {
+    max-width: 1200px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.dashboard-tabs {
+    display: flex;
+    gap: 2.5rem;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-tab {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+    cursor: pointer;
+    color: #888;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.dashboard-tab.active {
+    color: #4f5be8;
+    border-bottom: 2.5px solid #4f5be8;
+    font-weight: 500;
+}
+
+.dashboard-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.dashboard-left {
+    flex: 1.1;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    min-width: 260px;
+    max-width: 340px;
+}
+
+.dashboard-main-img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+}
+
+.dashboard-desc {
+    font-size: 1.08rem;
+    color: #555;
+    text-align: center;
+}
+
+.dashboard-right {
+    flex: 2.5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.chapter-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #eee;
+    padding: 1rem 1rem 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.chapter-img-wrap {
+    position: relative;
+    width: 150px;
+    height: 120px;
+    margin-bottom: 0.7rem;
+}
+
+.chapter-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.chapter-lock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.lock-icon {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.chapter-title {
+    font-weight: 600;
+    font-size: 1.08rem;
+    text-align: center;
+}

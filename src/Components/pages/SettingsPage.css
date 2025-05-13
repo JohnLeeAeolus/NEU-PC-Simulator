@@ -1,0 +1,157 @@
+.settings-root {
+    font-family: 'Segoe UI', sans-serif;
+    color: #222;
+    background: #fafbfc;
+    min-height: 100vh;
+}
+
+.settings-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem 2rem;
+    background: #fff;
+    border-radius: 12px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 16px #eaeaea;
+}
+
+.settings-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.settings-back {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.settings-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.settings-tabs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+.settings-tab {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    color: #888;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.settings-tab.active {
+    color: #4f5be8;
+    border-bottom: 2px solid #4f5be8;
+    font-weight: 500;
+}
+
+.audio-settings {
+    margin-bottom: 2.5rem;
+}
+
+.audio-settings h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.audio-slider-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    gap: 1.5rem;
+}
+
+.audio-slider-row span:first-child {
+    width: 180px;
+    text-align: left;
+}
+
+.audio-slider {
+    flex: 1;
+    accent-color: #4f5be8;
+    height: 4px;
+}
+
+.audio-slider-row span:last-child {
+    width: 32px;
+    text-align: right;
+}
+
+.controls-settings {
+    margin-top: 2.5rem;
+}
+
+.controls-settings h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.controls-tabs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.controls-tab {
+    background: none;
+    border: none;
+    font-size: 1.05rem;
+    padding: 0.4rem 0;
+    cursor: pointer;
+    color: #888;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+.controls-tab.active {
+    color: #4f5be8;
+    border-bottom: 2px solid #4f5be8;
+    font-weight: 500;
+}
+
+.controls-table-wrap {
+    background: #fafbfc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #eee;
+    padding: 1.2rem 1rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+}
+
+.controls-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.controls-table th,
+.controls-table td {
+    padding: 0.7rem 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.controls-table th {
+    background: #f5f6fa;
+    font-weight: 600;
+}
+
+.btn-save {
+    min-width: 60px;
+    padding: 0.3rem 1.1rem;
+    font-size: 1rem;
+    margin: 0;
+}
