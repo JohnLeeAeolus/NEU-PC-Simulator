@@ -3,12 +3,18 @@
     color: #222;
     background: #fafbfc;
     min-height: 100vh;
-    padding: 2rem 0;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .dashboard-tabs-wrap {
-    max-width: 1200px;
-    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 0 2vw;
+    box-sizing: border-box;
 }
 
 .dashboard-tabs {
@@ -36,10 +42,13 @@
 }
 
 .dashboard-main {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    height: calc(100vh - 110px);
     display: flex;
-    gap: 2.5rem;
+    gap: 3.5rem;
+    align-items: flex-start;
+    padding: 2vw 2vw 2vw 2vw;
+    box-sizing: border-box;
 }
 
 .dashboard-left {
@@ -50,37 +59,58 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem 1rem;
+    padding: 2vw 1.5vw 2.5vw 1.5vw;
     min-width: 260px;
-    max-width: 340px;
+    max-width: 420px;
+    margin-right: 2vw;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .dashboard-main-img {
     width: 100%;
-    max-width: 260px;
+    max-width: 340px;
     border-radius: 10px;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
     object-fit: cover;
 }
 
 .dashboard-desc {
-    font-size: 1.08rem;
+    font-size: 1.12rem;
     color: #555;
     text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-sandbox-img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #f3f3fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
 .dashboard-right {
     flex: 2.5;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .chapter-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2.2rem 2.5rem;
     width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    align-content: start;
 }
 
 .chapter-card {
@@ -92,13 +122,17 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    min-width: 150px;
+    height: 210px;
+    box-sizing: border-box;
 }
 
 .chapter-img-wrap {
     position: relative;
-    width: 150px;
+    width: 100%;
+    max-width: 180px;
     height: 120px;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.9rem;
 }
 
 .chapter-img {
@@ -130,4 +164,377 @@
     font-weight: 600;
     font-size: 1.08rem;
     text-align: center;
+}
+
+.sandbox-panel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+}
+
+.sandbox-card {
+    height: 48px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7f9cf5 0%, #4f5be8 100%);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.08rem;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #e0e7ff;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.sandbox-card.create {
+    background: linear-gradient(90deg, #4f5be8 0%, #7f9cf5 100%);
+    font-weight: 700;
+    font-size: 1.12rem;
+}
+
+.sandbox-card:not(.create) {
+    opacity: 0.85;
+    font-weight: 400;
+    font-size: 1.05rem;
+}
+
+.sandbox-card:hover {
+    box-shadow: 0 4px 16px #b4c6fc;
+}
+
+/* Troubleshooting Panel Styles */
+.troubleshooting-panel {
+    width: 100%;
+    background: #f8f8fd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #e0e7ff;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 340px;
+}
+
+.troubleshooting-pagination {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.troubleshooting-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e0e7ff;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.troubleshooting-dot.active {
+    background: #4f5be8;
+}
+
+.troubleshooting-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 1.2rem;
+    width: 100%;
+    max-width: 700px;
+}
+
+.troubleshooting-card {
+    background: #e5e7fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #e0e7ff;
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 90px;
+    min-height: 120px;
+    box-sizing: border-box;
+}
+
+.troubleshooting-card-img-wrap {
+    position: relative;
+    width: 48px;
+    height: 36px;
+    margin-bottom: 0.7rem;
+}
+
+.troubleshooting-lock {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 2;
+}
+
+.troubleshooting-card-label {
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: #222;
+    text-align: center;
+}
+
+/* Budget Mail Sidebar */
+.budget-mail-sidebar {
+    width: 220px;
+    min-width: 180px;
+    background: #183153;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2rem 1.2rem 2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px #e0e7ff;
+    height: 100%;
+    margin-right: 2vw;
+}
+
+.budget-mail-title {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.budget-mail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.budget-mail-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    gap: 0.7rem;
+}
+
+.mail-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.mail-badge {
+    background: #e53e3e;
+    color: #fff;
+    font-size: 0.85rem;
+    border-radius: 12px;
+    padding: 0.1rem 0.7rem;
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+/* Budget Panel */
+.budget-panel {
+    flex: 1 1 0;
+    width: 100%;
+    background: #f8f8fd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #e0e7ff;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 340px;
+    position: relative;
+}
+
+.budget-panel-topbar {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.budget-search {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background: #e5e7fa;
+    font-size: 1rem;
+    outline: none;
+}
+
+.budget-panel-actions {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.budget-action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 50%;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.budget-action-btn:hover {
+    background: #e5e7fa;
+}
+
+.budget-mail-list-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    position: relative;
+}
+
+.budget-mail-card {
+    height: 48px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7f9cf5 0%, #4f5be8 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    font-size: 1.08rem;
+    color: #222;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #e0e7ff;
+    margin-bottom: 0;
+}
+
+.budget-mail-text {
+    color: #222;
+    font-weight: 700;
+}
+
+.budget-compose-btn {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.budget-compose-btn:hover {
+    background: #e5e7fa;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .dashboard-main {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: stretch;
+        height: auto;
+    }
+
+    .dashboard-left {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dashboard-right {
+        justify-content: center;
+        height: auto;
+    }
+
+    .chapter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .troubleshooting-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+    }
+
+    .budget-panel {
+        min-width: 0;
+    }
+
+    .budget-mail-sidebar {
+        min-width: 0;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .dashboard-tabs-wrap,
+    .dashboard-main {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .dashboard-main {
+        padding: 1vw 0.5vw 1.5vw 0.5vw;
+    }
+
+    .chapter-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .dashboard-left {
+        padding: 1rem 0.5rem 1.2rem 0.5rem;
+    }
+
+    .sandbox-panel {
+        gap: 1rem;
+    }
+
+    .sandbox-card {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .troubleshooting-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .budget-mail-sidebar {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    }
+
+    .budget-panel {
+        padding: 1rem 0.5rem 1.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .troubleshooting-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-mail-sidebar {
+        padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    }
+
+    .budget-panel {
+        padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    }
 }
