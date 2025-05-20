@@ -1,28 +1,34 @@
 import React from "react";
+import meImg from '../../assets/me.png';
+import garfieldImg from '../../assets/garfield.png';
+import dogImg from '../../assets/dog.png';
+import dev4Img from '../../assets/dev4.jpg';
+import dev5Img from '../../assets/dev5.jpg';
+import dev6Img from '../../assets/dev6.jpg';
 
 const devs = [
     {
-        img: "/dev1.png", // Replace with your image paths
+        img: meImg, // Use imported image
         quote: "Yes, the chicken is the final boss. Why wouldn't it be?",
     },
     {
-        img: "/dev2.png",
+        img: garfieldImg,
         quote: "We're not behind schedule. The schedule is just... dynamic.",
     },
     {
-        img: "/dev3.png",
+        img: dogImg,
         quote: "Let's pretend the player won't try that.",
     },
     {
-        img: "/dev4.png",
+        img: dev4Img,
         quote: "Our game engine is held together by hope and duct tape.",
     },
     {
-        img: "/dev5.png",
+        img: dev5Img,
         quote: "Player fell through the world again? That's the true ending.",
     },
     {
-        img: "/dev6.png",
+        img: dev6Img,
         quote: "I programmed it to be dumb, not this dumb.",
     },
 ];

@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import gamingLogo from '../../assets/Gaming.png';
 
 export default function Header() {
     const location = useLocation();
     return (
         <nav className="navbar">
             <div className="navbar-left">
-                <img src="/logo.png" alt="Logo" className="logo" />
+                <img src={gamingLogo} alt="Logo" className="logo" />
                 <span className="brand">NEU PC Simulator</span>
             </div>
             <div className="navbar-center">
