@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import selection from '../../assets/selection.png';
+import selection from '../../assets/Selection.png';
 import './HeroSection.css';
 
 export default function HeroSection() {
