@@ -8,11 +8,12 @@
     height: 100vh;
     padding: 0;
     box-sizing: border-box;
+    padding-top: 64px;
 }
 
 .dashboard-tabs-wrap {
     width: 100%;
-    margin: 0 0 2rem 0;
+    margin: 0;
     padding: 0 2vw;
     box-sizing: border-box;
 }
@@ -21,7 +22,10 @@
     display: flex;
     gap: 2.5rem;
     border-bottom: 2px solid #eee;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    position: relative;
+    z-index: 2;
 }
 
 .dashboard-tab {
@@ -31,14 +35,34 @@
     padding: 0.7rem 0;
     cursor: pointer;
     color: #888;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: none;
+    font-weight: 500;
+    outline: none;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.dashboard-tab:hover {
+    color: #4f5be8;
 }
 
 .dashboard-tab.active {
     color: #4f5be8;
-    border-bottom: 2.5px solid #4f5be8;
-    font-weight: 500;
+    font-weight: 700;
+}
+
+.dashboard-tab.active::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 6px;
+    width: 70%;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4f5be8 0%, #7f9cf5 100%);
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    transition: width 0.2s;
 }
 
 .dashboard-main {

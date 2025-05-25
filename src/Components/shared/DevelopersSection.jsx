@@ -1,48 +1,37 @@
-import React from "react";
-import meImg from '../../assets/me.png';
-import garfieldImg from '../../assets/garfield.png';
-import dogImg from '../../assets/dog.png';
-import dev4Img from '../../assets/dev4.jpg';
-import dev5Img from '../../assets/dev5.jpg';
-import dev6Img from '../../assets/dev6.jpg';
+import React, { useState } from "react";
+import devs from "../data/devs";
+import "./DevelopersSection.css";
 
-const devs = [
-    {
-        img: meImg, // Use imported image
-        quote: "Yes, the chicken is the final boss. Why wouldn't it be?",
-    },
-    {
-        img: garfieldImg,
-        quote: "We're not behind schedule. The schedule is just... dynamic.",
-    },
-    {
-        img: dogImg,
-        quote: "Let's pretend the player won't try that.",
-    },
-    {
-        img: dev4Img,
-        quote: "Our game engine is held together by hope and duct tape.",
-    },
-    {
-        img: dev5Img,
-        quote: "Player fell through the world again? That's the true ending.",
-    },
-    {
-        img: dev6Img,
-        quote: "I programmed it to be dumb, not this dumb.",
-    },
-];
+function FlipCard({ dev }) {
+    const [flipped, setFlipped] = useState(false);
+    return (
+        <div
+            className={"flip-card" + (flipped ? " flipped" : "")}
+            onMouseEnter={() => setFlipped(true)}
+            onMouseLeave={() => setFlipped(false)}
+            onTouchStart={() => setFlipped((f) => !f)}
+        >
+            <div className="flip-card-inner">
+                <div className="flip-card-front dev-item">
+                    <img src={dev.avatar} alt={dev.name} className="dev-avatar" />
+                    <div className="dev-name">{dev.name}</div>
+                    <div className="dev-role">{dev.role}</div>
+                </div>
+                <div className="flip-card-back dev-item">
+                    <div className="dev-quote">{dev.quote}</div>
+                </div>
+            </div>
+        </div>
+    );
+}
 
 export default function DevelopersSection() {
     return (
-        <section className="developers">
-            <h2>Game Developers</h2>
+        <section className="developers fade-in-section">
+            <h2>Meet the Developers</h2>
             <div className="devs-list">
                 {devs.map((dev, idx) => (
-                    <div className="dev-item" key={idx}>
-                        <img src={dev.img} alt={`Dev ${idx + 1}`} className="dev-avatar" />
-                        <p className="dev-quote">"{dev.quote}"</p>
-                    </div>
+                    <FlipCard dev={dev} key={idx} />
                 ))}
             </div>
         </section>

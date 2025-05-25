@@ -11,7 +11,6 @@ export default function HelpPage() {
         <div className="help-root">
             <div className="help-main">
                 <div className="help-title-row">
-                    <span className="help-back">&#8592;</span>
                     <h1 className="help-title">Latest tutorials</h1>
                 </div>
                 <TutorialStepper activeStep={activeStep} setActiveStep={setActiveStep} />

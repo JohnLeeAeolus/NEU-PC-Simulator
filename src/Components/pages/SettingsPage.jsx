@@ -11,7 +11,6 @@ export default function SettingsPage() {
         <div className="settings-root">
             <div className="settings-main">
                 <div className="settings-title-row">
-                    <span className="settings-back">&#8592;</span>
                     <h1 className="settings-title">Settings</h1>
                 </div>
                 <SettingsTabs activeTab={activeTab} setActiveTab={setActiveTab} />

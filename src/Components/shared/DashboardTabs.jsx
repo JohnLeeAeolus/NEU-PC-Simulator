@@ -8,13 +8,17 @@ const tabs = [
 ];
 
 export default function DashboardTabs({ activeTab, setActiveTab }) {
+    console.log("DashboardTabs rendered");
     return (
-        <div className="dashboard-tabs">
+        <div className="dashboard-tabs" role="tablist">
             {tabs.map((tab) => (
                 <button
                     key={tab}
                     className={"dashboard-tab" + (activeTab === tab ? " active" : "")}
                     onClick={() => setActiveTab(tab)}
+                    role="tab"
+                    aria-selected={activeTab === tab}
+                    aria-current={activeTab === tab ? "page" : undefined}
                 >
                     {tab}
                 </button>
