@@ -28,6 +28,7 @@ export default function ChapterGrid({ selectedIdx, onSelect }) {
                     ref={el => cardRefs.current[idx] = el}
                     onClick={() => onSelect(idx)}
                     style={ch.isTutorial ? { cursor: 'pointer', boxShadow: '0 4px 16px #b4c6fc' } : { cursor: 'pointer' }}
+                    aria-label={ch.title + (ch.locked ? ' (Locked)' : '')}
                 >
                     <div className="chapter-img-wrap">
                         <img src={ch.img} alt={ch.title} className="chapter-img" />

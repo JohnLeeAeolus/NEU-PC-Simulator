@@ -45,13 +45,13 @@
     background: none;
     border: none;
     font-size: 1.1rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 2rem;
     cursor: pointer;
     color: #888;
     border-bottom: 2px solid transparent;
     transition: color 0.2s, border-bottom 0.2s;
     font-weight: 500;
-    width: 120px;
+    width: auto;
     position: relative;
     outline: none;
 }
@@ -65,11 +65,10 @@
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 120px;
     height: 3px;
     background: linear-gradient(90deg, #4f5be8 0%, #7f9cf5 100%);
     border-radius: 2px;
-    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1), width 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     z-index: 1;
 }
 
