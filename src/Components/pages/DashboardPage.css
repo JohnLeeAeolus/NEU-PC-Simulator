@@ -1,7 +1,7 @@
 .dashboard-root {
     font-family: 'Segoe UI', sans-serif;
-    color: #222;
-    background: #fafbfc;
+    color: #F7F7F7;
+    background: #10151A;
     min-height: 100vh;
     min-width: 100vw;
     width: 100vw;
@@ -21,12 +21,14 @@
 .dashboard-tabs {
     display: flex;
     gap: 2.5rem;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #00E0FF;
     margin-bottom: 0.5rem;
-    background: #fff;
+    background: rgba(26, 34, 44, 0.95);
     position: relative;
     z-index: 2;
     height: 48px;
+    box-shadow: 0 1px 8px #00E0FF44;
+    backdrop-filter: blur(8px);
 }
 
 .dashboard-tab {
@@ -35,7 +37,7 @@
     font-size: 1.1rem;
     padding: 0.7rem 2rem;
     cursor: pointer;
-    color: #888;
+    color: #F7F7F7;
     border-bottom: none;
     font-weight: 500;
     outline: none;
@@ -45,11 +47,11 @@
 }
 
 .dashboard-tab:hover {
-    color: #4f5be8;
+    color: #00E0FF;
 }
 
 .dashboard-tab.active {
-    color: #4f5be8;
+    color: #00E0FF;
     font-weight: 700;
 }
 
@@ -58,7 +60,7 @@
     bottom: -2px;
     left: 0;
     height: 3px;
-    background: linear-gradient(90deg, #4f5be8 0%, #7f9cf5 100%);
+    background: #00E0FF;
     border-radius: 2px;
     transition: left 0.3s cubic-bezier(0.4, 0.2, 0.2, 1), width 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
     z-index: 1;
@@ -72,13 +74,14 @@
     align-items: flex-start;
     padding: 2vw 2vw 2vw 2vw;
     box-sizing: border-box;
+    background: linear-gradient(120deg, #10151A 60%, #232F3E 100%);
 }
 
 .dashboard-left {
     flex: 1.1;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px #eee;
+    background: rgba(35, 47, 62, 0.95);
+    border-radius: 14px;
+    box-shadow: 0 2px 16px #00E0FF22;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,6 +92,8 @@
     height: 100%;
     box-sizing: border-box;
     animation: fade-in-panel 0.7s;
+    color: #F7F7F7;
+    border: 1.5px solid #00E0FF22;
 }
 
 .dashboard-main-img {
@@ -202,9 +207,21 @@
 }
 
 .chapter-title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.08rem;
     text-align: center;
+    color: #00E0FF;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+}
+
+.chapter-card.selected .chapter-title {
+    color: #00FF85;
+    text-shadow: none;
+}
+
+.chapter-card .chapter-title {
+    opacity: 1 !important;
 }
 
 .sandbox-panel {
@@ -215,26 +232,32 @@
     align-items: stretch;
     justify-content: flex-start;
     margin-top: 0.5rem;
+    background: rgba(35, 47, 62, 0.95);
+    color: #F7F7F7;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px #00E0FF22;
+    border: 1.5px solid #00E0FF22;
 }
 
 .sandbox-card {
     height: 48px;
     border-radius: 8px;
-    background: linear-gradient(90deg, #7f9cf5 0%, #4f5be8 100%);
+    background: linear-gradient(90deg, #00E0FF 0%, #00FF85 100%);
     margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.08rem;
-    color: #fff;
+    color: #10151A;
     font-weight: 500;
-    box-shadow: 0 2px 8px #e0e7ff;
+    box-shadow: 0 2px 8px #00E0FF44;
     cursor: pointer;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, background 0.2s, color 0.2s;
 }
 
 .sandbox-card.create {
-    background: linear-gradient(90deg, #4f5be8 0%, #7f9cf5 100%);
+    background: #232F3E;
+    color: #00E0FF;
     font-weight: 700;
     font-size: 1.12rem;
 }
@@ -246,20 +269,24 @@
 }
 
 .sandbox-card:hover {
-    box-shadow: 0 4px 16px #b4c6fc;
+    box-shadow: 0 4px 16px #00E0FF;
+    background: #00E0FF;
+    color: #10151A;
 }
 
 /* Troubleshooting Panel Styles */
 .troubleshooting-panel {
     width: 100%;
-    background: #f8f8fd;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px #e0e7ff;
+    background: rgba(35, 47, 62, 0.95);
+    border-radius: 14px;
+    box-shadow: 0 2px 16px #00E0FF22;
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 340px;
+    color: #F7F7F7;
+    border: 1.5px solid #00E0FF22;
 }
 
 .troubleshooting-pagination {
@@ -274,13 +301,13 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #e0e7ff;
+    background: #F7F7F7;
     display: inline-block;
     transition: background 0.2s;
 }
 
 .troubleshooting-dot.active {
-    background: #4f5be8;
+    background: #00E0FF;
 }
 
 .troubleshooting-grid {
@@ -492,7 +519,7 @@
 }
 
 .budget-action-btn:hover {
-    background: #e5e7fa;
+    background: #232F3E;
 }
 
 .budget-mail-list-panel {
@@ -507,19 +534,19 @@
 .budget-mail-card {
     height: 48px;
     border-radius: 8px;
-    background: linear-gradient(90deg, #7f9cf5 0%, #4f5be8 100%);
+    background: linear-gradient(90deg, #00E0FF 0%, #00FF85 100%);
     display: flex;
     align-items: center;
     padding-left: 2rem;
     font-size: 1.08rem;
-    color: #222;
+    color: #10151A;
     font-weight: 700;
     box-shadow: 0 2px 8px #e0e7ff;
     margin-bottom: 0;
 }
 
 .budget-mail-text {
-    color: #222;
+    color: #10151A;
     font-weight: 700;
 }
 
@@ -537,7 +564,7 @@
 }
 
 .budget-compose-btn:hover {
-    background: #e5e7fa;
+    background: #232F3E;
 }
 
 /* Responsive styles */
@@ -646,9 +673,9 @@
     left: 50%;
     top: -180px;
     transform: translateX(-50%);
-    background: #fff;
+    background: rgba(35, 47, 62, 0.95);
     border-radius: 12px;
-    box-shadow: 0 4px 24px #b4c6fc;
+    box-shadow: 0 4px 24px #00E0FF22;
     padding: 1rem 1.2rem;
     min-width: 220px;
     max-width: 260px;
@@ -659,6 +686,8 @@
     pointer-events: none;
     opacity: 0.98;
     transition: opacity 0.2s, top 0.2s;
+    color: #F7F7F7;
+    border: 1.5px solid #00E0FF22;
 }
 
 .chapter-preview-img {
@@ -674,12 +703,12 @@
     font-weight: 700;
     font-size: 1.08rem;
     margin-bottom: 0.3rem;
-    color: #222;
+    color: #00E0FF;
     text-align: center;
 }
 
 .chapter-preview-desc {
-    color: #555;
+    color: #F7F7F7;
     font-size: 0.98rem;
     text-align: center;
 }
