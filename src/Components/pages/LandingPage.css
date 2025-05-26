@@ -6,7 +6,6 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background: rgba(26, 34, 44, 0.95);
@@ -19,10 +18,15 @@
     backdrop-filter: blur(8px);
 }
 
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     width: 40px;
     height: 40px;
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 .brand {
@@ -30,18 +34,19 @@
     font-size: 1.25rem;
     color: #00E0FF;
     letter-spacing: 1px;
-    text-shadow: 0 0 8px #00E0FF44;
+    text-shadow: none;
+    margin-right: 0;
 }
 
 .navbar-center {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    margin-left: 0;
 }
 
 .nav-list {
     display: flex;
-    gap: 3rem;
+    gap: 0.75rem;
     list-style: none;
     margin: 0;
     padding: 0;
