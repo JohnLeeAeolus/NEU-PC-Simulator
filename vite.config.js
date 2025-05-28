@@ -17,15 +17,6 @@ export default defineConfig({
       output: {
         assetFileNames: 'assets/[name][extname]'
       }
-    },
-    target: 'es2015',
-    minify: 'terser',
-    sourcemap: true
-  },
-  server: {
-    host: true,
-    port: 3000,
-    strictPort: true,
-    open: true
+    }
   }
 })
