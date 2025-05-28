@@ -18,6 +18,22 @@ export default function PCBuildingSimulator() {
             }
         };
 
+        // Function to resize the canvas to fill the window
+        const resizeCanvas = () => {
+            const canvas = document.getElementById('canvas');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+            }
+        };
+
+        // Initial resize
+        resizeCanvas();
+        // Resize on window change
+        window.addEventListener('resize', resizeCanvas);
+
         // Check Windows version compatibility
         const checkWindowsCompatibility = () => {
             const userAgent = navigator.userAgent;
@@ -67,6 +83,7 @@ export default function PCBuildingSimulator() {
                     console.log('PC Building Simulator started successfully');
                     // Apply Windows scaling fix after game starts
                     handleWindowsScaling();
+                    resizeCanvas(); // Ensure canvas is correct after game starts
                 }).catch((err) => {
                     console.error('Failed to start PC Building Simulator:', err);
                     // Show user-friendly error message
@@ -94,6 +111,7 @@ export default function PCBuildingSimulator() {
                 containerRef.current.removeChild(script);
             }
             window.removeEventListener('resize', handleWindowsScaling);
+            window.removeEventListener('resize', resizeCanvas);
         };
     }, []);
 
