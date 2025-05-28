@@ -12,7 +12,7 @@ export default function TutorialPage() {
             </button>
             <div className="tutorial-container">
                 <iframe
-                    src="/src/Tutorial/tutorial.html"
+                    src="/Tutorial/tutorial.html"
                     title="PC Building Tutorial"
                     className="game-iframe"
                     allow="fullscreen"

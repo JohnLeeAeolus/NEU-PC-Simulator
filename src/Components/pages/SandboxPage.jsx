@@ -12,7 +12,7 @@ export default function SandboxPage() {
             </button>
             <div className="tutorial-container">
                 <iframe
-                    src="/src/Sandbox/sandbox.html"
+                    src="/Sandbox/sandbox.html"
                     title="PC Building Sandbox"
                     className="game-iframe"
                     allow="fullscreen"
