@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import chapter1 from '../../assets/chapter 1.png';
 import chapter2 from '../../assets/chapter 2.png';
 import chapter3 from '../../assets/chapter 3.png';
@@ -19,6 +20,18 @@ const chapters = [
 
 export default function ChapterGrid({ selectedIdx, onSelect }) {
     const cardRefs = useRef([]);
+    const navigate = useNavigate();
+
+    const handleChapterClick = (idx) => {
+        const chapter = chapters[idx];
+        if (chapter.isTutorial) {
+            // Navigate to the tutorial page
+            navigate('/tutorial');
+        } else {
+            onSelect(idx);
+        }
+    };
+
     return (
         <div className="chapter-grid" style={{ position: 'relative' }}>
             {chapters.map((ch, idx) => (
@@ -26,7 +39,7 @@ export default function ChapterGrid({ selectedIdx, onSelect }) {
                     className={"chapter-card" + (ch.isTutorial ? " tutorial-card" : "") + (selectedIdx === idx ? " selected" : "")}
                     key={idx}
                     ref={el => cardRefs.current[idx] = el}
-                    onClick={() => onSelect(idx)}
+                    onClick={() => handleChapterClick(idx)}
                     style={ch.isTutorial ? { cursor: 'pointer', boxShadow: '0 4px 16px #b4c6fc' } : { cursor: 'pointer' }}
                     aria-label={ch.title + (ch.locked ? ' (Locked)' : '')}
                 >
