@@ -18,7 +18,7 @@ export default function PCBuildingSimulator() {
             }
         };
 
-        // Function to resize the canvas to fill the window
+        // Function to resize the canvas to fill the window and notify the engine
         const resizeCanvas = () => {
             const canvas = document.getElementById('canvas');
             if (canvas) {
@@ -27,6 +27,12 @@ export default function PCBuildingSimulator() {
                 canvas.style.width = window.innerWidth + 'px';
                 canvas.style.height = window.innerHeight + 'px';
             }
+            // Notify the engine (Godot) of the resize
+            window.dispatchEvent(new Event('resize'));
+            // If you have access to the engine instance, call its resize method here
+            // if (window.engine && window.engine.setCanvasSize) {
+            //     window.engine.setCanvasSize(window.innerWidth, window.innerHeight);
+            // }
         };
 
         // Initial resize
