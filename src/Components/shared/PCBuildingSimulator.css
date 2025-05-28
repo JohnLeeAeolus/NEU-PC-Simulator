@@ -7,12 +7,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transform-origin: center center;
+    transform: scale(1);
+    -webkit-transform: scale(1);
 }
 
 #canvas {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transform-origin: center center;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 #canvas:focus {
@@ -133,5 +142,36 @@
     .error-message {
         padding: 12px;
         font-size: 13px;
+    }
+}
+
+/* Prevent zooming on Windows 10 */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .pc-building-simulator-container {
+        zoom: 1;
+        -ms-zoom: 1;
+    }
+
+    #canvas {
+        zoom: 1;
+        -ms-zoom: 1;
+    }
+}
+
+/* Fix for Windows 10 scaling */
+@supports (-ms-ime-align: auto) {
+    .pc-building-simulator-container {
+        zoom: 1;
+        -ms-zoom: 1;
+        transform: none;
+        -webkit-transform: none;
+    }
+
+    #canvas {
+        zoom: 1;
+        -ms-zoom: 1;
+        transform: none;
+        -webkit-transform: none;
     }
 }

@@ -5,6 +5,19 @@ export default function PCBuildingSimulator() {
     const containerRef = useRef(null);
 
     useEffect(() => {
+        // Handle Windows 10 scaling
+        const handleWindowsScaling = () => {
+            const isWindows = navigator.userAgent.indexOf('Windows') !== -1;
+            if (isWindows) {
+                // Reset any zoom/scale
+                document.body.style.zoom = "1";
+                if (containerRef.current) {
+                    containerRef.current.style.zoom = "1";
+                    containerRef.current.style.transform = "scale(1)";
+                }
+            }
+        };
+
         // Check Windows version compatibility
         const checkWindowsCompatibility = () => {
             const userAgent = navigator.userAgent;
@@ -52,6 +65,8 @@ export default function PCBuildingSimulator() {
                 const engine = new Engine(config);
                 engine.startGame().then(() => {
                     console.log('PC Building Simulator started successfully');
+                    // Apply Windows scaling fix after game starts
+                    handleWindowsScaling();
                 }).catch((err) => {
                     console.error('Failed to start PC Building Simulator:', err);
                     // Show user-friendly error message
@@ -71,10 +86,14 @@ export default function PCBuildingSimulator() {
             containerRef.current.appendChild(warningDiv);
         }
 
+        // Apply scaling fix on window resize
+        window.addEventListener('resize', handleWindowsScaling);
+
         return () => {
             if (containerRef.current) {
                 containerRef.current.removeChild(script);
             }
+            window.removeEventListener('resize', handleWindowsScaling);
         };
     }, []);
 
