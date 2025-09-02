@@ -1,0 +1,336 @@
+.landing-root {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #F7F7F7;
+    background: #10151A;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(26, 34, 44, 0.95);
+    box-shadow: 0 1px 8px #00E0FF44;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #00E0FF;
+    letter-spacing: 1px;
+    text-shadow: none;
+    margin-right: 0;
+}
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center .nav-link {
+    text-decoration: none;
+    color: #F7F7F7;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.navbar-center .nav-link:hover {
+    color: #10151A;
+    background: #00E0FF;
+    box-shadow: 0 0 8px #00E0FF;
+}
+
+.navbar-center .nav-link.active {
+    color: #00E0FF;
+    background: #232F3E;
+}
+
+.btn {
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #00E0FF 0%, #00FF85 100%);
+    color: #10151A;
+    box-shadow: 0 2px 8px #00E0FF44;
+}
+
+.btn-primary:hover {
+    background: #232F3E;
+    color: #00E0FF;
+    box-shadow: 0 0 12px #00E0FF;
+}
+
+.btn-secondary {
+    background: #232F3E;
+    color: #F7F7F7;
+}
+
+.btn-secondary:hover {
+    background: #00E0FF;
+    color: #10151A;
+}
+
+.hero {
+    position: relative;
+    height: calc(100vh - 64px);
+    background: linear-gradient(120deg, #10151A 60%, #232F3E 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(26, 34, 44, 0.85);
+    padding: 2rem 3rem;
+    border-radius: 18px;
+    text-align: center;
+    color: #F7F7F7;
+    box-shadow: 0 4px 32px #00E0FF33;
+    border: 1.5px solid #00E0FF33;
+    backdrop-filter: blur(8px);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #00E0FF;
+    text-shadow: 0 0 12px #00E0FF99;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #F7F7F7;
+    text-shadow: 0 0 6px #00E0FF33;
+}
+
+.btn-explore {
+    background: linear-gradient(90deg, #00E0FF 0%, #00FF85 100%);
+    color: #10151A;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px #00E0FF44;
+}
+
+.btn-explore:hover {
+    background: #232F3E;
+    color: #00E0FF;
+    box-shadow: 0 10px 15px #00E0FF;
+}
+
+.features {
+    padding: 6rem 2rem;
+    background: #18122B;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00E0FF;
+    margin-bottom: 1rem;
+    text-shadow: none;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+.features-subtitle {
+    font-size: 1.125rem;
+    color: #F7F7F7;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    line-height: 1.6;
+    text-shadow: none;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding: 0 1rem;
+}
+
+.feature-item {
+    background: rgba(35, 47, 62, 0.95);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #00E0FF22;
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1.5px solid #00E0FF22;
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #00E0FF99;
+    border-color: #00E0FF;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: #00E0FF;
+    text-shadow: 0 0 8px #00E0FF44;
+}
+
+.feature-item p {
+    color: #F7F7F7;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #00E0FF;
+    margin-bottom: 1rem;
+    text-shadow: none;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+.developers {
+    padding: 6rem 2rem;
+    background: #18122B;
+    text-align: center;
+}
+
+.developers h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00E0FF;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px #00E0FF44;
+}
+
+.devs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding: 0 1rem;
+}
+
+.dev-item {
+    background: rgba(35, 47, 62, 0.95);
+    border-radius: 14px;
+    padding: 2rem;
+    transition: transform 0.2s ease;
+    color: #F7F7F7;
+    box-shadow: 0 4px 16px #00E0FF22;
+    border: 1.5px solid #00E0FF22;
+}
+
+.dev-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 32px #00E0FF99;
+    border-color: #00E0FF;
+}
+
+.dev-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #232F3E;
+    box-shadow: 0 4px 12px #00E0FF22;
+}
+
+.dev-name {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #00E0FF;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 8px #00E0FF44;
+}
+
+.dev-role {
+    color: #F7F7F7;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.dev-quote {
+    font-size: 0.875rem;
+    color: #00E0FF;
+    line-height: 1.6;
+    font-style: italic;
+    text-shadow: 0 0 6px #00E0FF22;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-list {
+        gap: 1.5rem;
+    }
+
+    .features,
+    .developers {
+        padding: 4rem 1rem;
+    }
+
+    .features h2,
+    .developers h2 {
+        font-size: 2rem;
+    }
+
+    .features-list,
+    .devs-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

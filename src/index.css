@@ -3,10 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -19,15 +21,43 @@ html, body, #root {
 /* Light Mode by Default */
 body {
   margin: 0;
-  background-color: #ced8ff; /* light blue background */
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.5;
 }
 
 /* Dark Mode */
 .dark-mode body {
-  background-color: #121212; /* deep dark background */
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
 
 /* Optional: Smooth transitions for background changes */
 body {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body,
+html {
+  background: #10151A;
+  min-height: 100vh;
 }
